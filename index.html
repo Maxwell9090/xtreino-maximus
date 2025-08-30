@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>🔥 X-TREINO MAXIMUS 🔥</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Música de fundo -->
+  <audio id="bgmusic" src="codmusic.mp3" autoplay loop></audio>
+  <button id="music-toggle" title="Ativar/Desativar música">🔊</button>
+  <main class="container">
+    <header class="header-top">
+      <h1 class="brand">
+        <span class="fire-ico">🔥</span>
+        <span>X-TREINO MAXIMUS</span>
+        <span class="fire-ico">🔥</span>
+      </h1>
+      <section class="top-panel">
+        <div class="top-block event-block">
+          <div class="field"><span class="label">Mapa</span><span class="pill">ISOLATED</span></div>
+          <div class="field"><span class="label">Dia</span><span class="pill">30/08/2025</span></div>
+          <div class="field"><span class="label">Modo</span><span class="pill">Duo</span></div>
+          <div class="field"><span class="label">Abertura</span><span class="pill">19h45</span></div>
+          <div class="field"><span class="label">Start</span><span class="pill">20h05</span></div>
+          <div class="field"><span class="label">Quedas</span><span class="pill">4</span></div>
+          <div class="field">
+            <span class="label">Intervalo</span>
+            <span class="badge badge-accent animated-pill">3 MINUTOS EM CADA QUEDA</span>
+          </div>
+          <div class="field"><span class="label">Configurações da sala</span>
+            <div class="block">MUNIÇÃO INFINITA<br>REANIMAÇÃO AUTOMÁTICA</div>
+          </div>
+          <div class="field"><span class="label">Prêmio (4ª queda)</span><span class="pill">R$100</span></div>
+        </div>
+        <div class="top-block regras-block">
+          <div class="field">
+            <span class="label">Regras</span>
+            <div class="block regras">
+              <div class="reg-line red">
+                <span class="emoji">❌</span> PROIBIDO JATO <span class="emoji">✈️</span>
+              </div>
+              <div class="reg-line green">
+                <span class="emoji">✅</span> TODAS AS OUTRAS ARMAS E RECURSOS LIBERADOS
+              </div>
+            </div>
+          </div>
+          <div class="field">
+            <span class="label tiktok-label">
+              <img src="tiktok.png" alt="TikTok" class="ic-link tiktok-ico"> Transmissão (link)
+            </span>
+            <a id="link-transmissao-display" class="link-display" href="https://www.tiktok.com/@tamiresnazario?_t=ZM-8zGFRa0iGpC&_r=1" target="_blank" rel="noopener noreferrer">
+              https://www.tiktok.com/@tamiresnazario?_t=ZM-8zGFRa0iGpC&_r=1
+            </a>
+          </div>
+          <div class="field">
+            <span class="label zap-label">
+              <img src="zap.png" alt="WhatsApp" class="ic-link zap-ico"> Link do grupo
+            </span>
+            <a id="link-grupo-display" class="link-display" href="https://chat.whatsapp.com/L6KSovaeB2ZBsNRwmtcwnk" target="_blank" rel="noopener noreferrer">
+              https://chat.whatsapp.com/L6KSovaeB2ZBsNRwmtcwnk
+            </a>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <section class="slots">
+      <h2 class="slots-title">╭━━━☠︎ SLOTS ☠︎━━━╮</h2>
+      <div id="slots-grid" class="grid" aria-live="polite"></div>
+      <h3 class="reserva-title centered">╭📋 𝙻𝙸𝚂𝚃𝙰 𝙳𝙴 𝙴𝚂𝙿𝙀𝚁𝙰 ╮</h3>
+      <div id="reserves" class="reserves-grid"></div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
