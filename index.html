@@ -2,92 +2,63 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Salinha Maximus</title>
-  <style>
-    body {
-      background: #181818;
-      color: #fafafa;
-      font-family: 'Segoe UI', Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-    }
-    .container {
-      background: #232323;
-      border-radius: 12px;
-      box-shadow: 0 4px 24px rgba(0,0,0,0.4);
-      padding: 2rem 2.5rem;
-      max-width: 400px;
-      width: 100%;
-    }
-    h1 {
-      font-size: 2rem;
-      color: #ffd700;
-      margin-bottom: 1.5rem;
-      text-align: center;
-    }
-    ul, li {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
-    .regras {
-      margin-bottom: 2rem;
-    }
-    .regras li {
-      margin: 0.3rem 0;
-      font-size: 1.1rem;
-    }
-    .proibido {
-      margin-top: 1.2rem;
-      background: #2f2f2f;
-      border-left: 4px solid #e53935;
-      padding: 1rem 1rem 0.5rem 1rem;
-      border-radius: 8px;
-    }
-    .proibido-title {
-      color: #e53935;
-      font-weight: bold;
-      margin-bottom: 0.7rem;
-      font-size: 1.13rem;
-    }
-    .proibido li {
-      margin: 0.22rem 0;
-      font-size: 1rem;
-      padding-left: 0.6rem;
-    }
-    .emoji {
-      font-size: 1.3em;
-      margin-right: 0.3em;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>XTreino Maximus</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.ico">
 </head>
 <body>
-  <div class="container">
-    <h1>Salinha Maximus</h1>
-    <ul class="regras">
-      <li><span class="emoji">🎯</span> 3 quedas</li>
-      <li><span class="emoji">🗺️</span> Mapa: Isolated</li>
-      <li><span class="emoji">🚫</span> Sem habilidades</li>
-      <li><span class="emoji">🔫</span> Munição infinita</li>
-      <li><span class="emoji">♻️</span> Reanimação automática</li>
-    </ul>
-    <div class="proibido">
-      <div class="proibido-title">🚫 PROIBIDO:</div>
-      <ul>
-        <li>◦ Hackers</li>
-        <li>◦ Falta de respeito</li>
-        <li>◦ Bazucas (SMRS, FHJ, Thumper)</li>
-        <li>◦ Escopetas auto/semi (HS-2126, Striker)</li>
-        <li>◦ Munição especial</li>
-        <li>◦ Atropelar</li>
-        <li>◦ Call aberta para todos</li>
-      </ul>
-    </div>
-  </div>
+  <main class="container">
+    <header>
+      <section class="top-panel">
+        <div class="brand-block">
+          <div class="brand">XTreino Maximus</div>
+          <div class="subtitle">Organização Maxwell</div>
+        </div>
+        <div class="top-block event-block">
+          <div class="field"><span class="label">Quedas</span><span class="pill">4</span></div>
+          <div class="field">
+            <span class="label">Intervalo</span>
+            <span class="badge badge-accent animated-pill">3 MINUTOS EM CADA QUEDA</span>
+          </div>
+          <div class="field"><span class="label">Configurações da sala</span>
+            <div class="block">MUNIÇÃO INFINITA<br>REANIMAÇÃO AUTOMÁTICA</div>
+          </div>
+          <div class="field"><span class="label">Prêmio (4ª queda)</span><span class="pill">R$100</span></div>
+        </div>
+        <div class="top-block regras-block">
+          <div class="field">
+            <span class="label">Regras</span>
+            <div class="block regras">
+              <div class="reg-line red">
+                <span class="emoji">❌</span> PROIBIDO JATO <span class="emoji">✈️</span>
+              </div>
+              <div class="reg-line green">
+                <span class="emoji">✅</span> TODAS AS OUTRAS ARMAS E RECURSOS LIBERADOS
+              </div>
+            </div>
+          </div>
+          <div class="field">
+            <span class="label tiktok-label">
+              <img src="tiktok.png" alt="TikTok" class="ic-link tiktok-ico"> Transmissão (link)
+            </span>
+            <a id="link-transmissao-display" class="link-display" href="https://www.tiktok.com/@tamiresnazario?_t=ZM-8zGFRa0iGpC&_r=1" target="_blank" rel="noopener noreferrer">
+              https://www.tiktok.com/@tamiresnazario?_t=ZM-8zGFRa0iGpC&_r=1
+            </a>
+          </div>
+          <div class="field">
+            <span class="label zap-label">
+              <img src="zap.png" alt="WhatsApp" class="ic-link zap-ico"> Link do grupo
+            </span>
+            <a id="link-grupo-display" class="link-display" href="https://chat.whatsapp.com/L6KSovaeB2ZBsNRwmtcwnk" target="_blank" rel="noopener noreferrer">
+              https://chat.whatsapp.com/L6KSovaeB2ZBsNRwmtcwnk
+            </a>
+          </div>
+        </div>
+      </section>
+    </header>
+    <!-- Removido a seção de slots e reservas (cards) -->
+  </main>
+  <script src="app.js"></script>
 </body>
 </html>
