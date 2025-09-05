@@ -11,25 +11,21 @@
   const linkGrupoDisplay = document.getElementById('link-grupo-display');
   const bgmusic = document.getElementById('bgmusic');
   const musicToggle = document.getElementById('music-toggle');
-
-  // Dados iniciais
-  const defaultSlots = [
-    { clan:'nitrix / shark', tag:'Nx / Sk', player1:'New End', player2:'', semtag:'', contato:'34984278843' },
-    { clan:'', tag:'', player1:'', player2:'', semtag:'', contato:'Sayajin' },
-    { clan:'', tag:'', player1:'', player2:'', semtag:'', contato:'jujuba' },
-    { clan:'Maximus', tag:'M•', player1:'M҉・CHZINN', player2:'M҉・ÁLVARO', semtag:'', contato:'' },
-    { clan:'Maximus', tag:'M•', player1:'M҉・MAGRINHO', player2:'M҉・IGRIS', semtag:'', contato:'' },
-    { clan:'Maximus', tag:'M•', player1:'M҉・GOMES', player2:'M҉・SAITAMA', semtag:'', contato:'' },
-    { clan:'', tag:'Jesus / Ruivinha', player1:'', player2:'', semtag:'', contato:'' },
-    { clan:'', tag:'', player1:'', player2:'', semtag:'Mucilønttk/ৡPSڪwalaceৡ', contato:'87981385456' },
-    { clan:'LDN', tag:'', player1:'', player2:'', semtag:'MF-EoJoker.Tk/Macaco louco', contato:'91383536' },
-    { clan:'Ladrões de Kill', tag:'ĿÐK', player1:'Pedro', player2:'Eliza', semtag:'', contato:'' },
-    { clan:'JIG SAW', tag:'SAW •', player1:'Storm', player2:'Loba', semtag:'', contato:'' },
-    { clan:'', tag:'Vђa杰Suang', player1:'conexões', player2:'', semtag:'ǨȺȺȞ', contato:'(11)94874-8668' },
-    { clan:'Legião Sombria', tag:'LS', player1:'', player2:'', semtag:'Ceifador/Calviz', contato:'54991278578' },
-    { clan:'', tag:'', player1:'', player2:'', semtag:'BRUTA.ttk®-Ark-jr', contato:'92992901463' },
-    ...Array.from({length: SLOTS - 14}, () => ({clan:'', tag:'', player1:'', player2:'', semtag:'', contato:''}))
-  ];
+  // Autoplay garantido ao carregar
+  window.addEventListener('DOMContentLoaded', () => {
+    if (bgmusic) {
+      bgmusic.volume = 0.5;
+      const playPromise = bgmusic.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {
+          // Tenta novamente após interação do usuário
+          document.body.addEventListener('click', () => {
+            bgmusic.play();
+          }, { once: true });
+        });
+      }
+    }
+  });
 
   let state = {
     event: {
